@@ -6,6 +6,8 @@ KW
     - do
     - until
     - in
+    - break
+    - continue
   FUNC:
     - function
     - return
@@ -15,6 +17,7 @@ KW
     - elseif
     - caseof
     - case
+    - default
   DT:
     Integer
       Scalar
@@ -55,7 +58,6 @@ KW
     - or
     - not
     - is
-    - is not
       
 
 Punctuation
