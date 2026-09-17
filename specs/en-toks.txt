@@ -1,0 +1,113 @@
+Token Specification:
+
+KW
+  Loops:
+    - for
+    - do
+    - until
+    - in
+  FUNC:
+    - function
+    - return
+  CONDITIONAL:
+    - if
+    - else
+    - elseif
+    - caseof
+    - case
+  DT:
+    Integer
+      Scalar
+        - i64
+        - i32
+        - i16
+      Vector
+        - i64vec
+        - i32vec
+        - i16vec
+      Matrix
+        - i64mat
+        - i32mat
+        - i16mat
+    Float
+      Scalar
+        - f64
+        - f32
+        - f16
+      Vector
+        - f64vec
+        - f32vec
+        - f16vec
+      Matrix
+        - f64mat
+        - f32mat
+        - f16mat
+    Boolean
+      - bool
+      - boolvec
+      - boolmat
+      - true
+      - false
+    Other
+      - string
+  Word-based Logic/Rel Ops:
+    - and
+    - or
+    - not
+    - is
+    - is not
+      
+
+Punctuation
+  - {
+  - }
+  - (
+  - )
+  - [
+  - ]
+  - ;
+  - ->
+  - ,
+  - ... (ellipses)
+  - :
+  
+Operators
+  Standard
+    - +
+    - -
+    - *
+    - /
+    - %
+  Matrix
+    - '
+    - .+
+    - .-
+    - .*
+    - ./
+  Relational and Comparison Ops
+    - ==
+    - !=
+    - < (less than)
+    - > (greater than)
+    - <=
+    - >=
+  Assignments
+    - =
+    - +=
+    - -=
+    - *=
+    - /=
+  
+Value Carrying Tokens
+  - id
+  - int literal
+  - float literal
+  - string literal
+  
+Compiler
+  - EOF
+  - Error
+        
+    
+      
+      
