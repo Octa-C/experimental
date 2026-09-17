@@ -5,8 +5,6 @@ KW
     - for
     - do
     - until
-    - in
-    - break
     - continue
   FUNC:
     - function
@@ -58,7 +56,9 @@ KW
     - or
     - not
     - is
-      
+    - in
+  MISC
+    - break
 
 Punctuation
   - {
