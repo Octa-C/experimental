@@ -47,6 +47,7 @@ SYMBOL_MAP = {
     '=': 'ASSIGN',
 }
 
+# Structure: list of dicts -> [{'name': 'TOKEN_NAME', 'values': ['val1', 'val2']}]
 tokens = []
 category_stack = []
 
@@ -63,7 +64,12 @@ with open(input_file, 'r', encoding='utf-8') as f:
 
         category_stack = category_stack[:indent_level]
 
-        if content.startswith('-'):
+        if content.startswith('|'):
+            # Collect value parts and attach to the most recent token
+            val = content.lstrip('|').strip()
+            if tokens:
+                tokens[-1]['values'].append(val)
+        elif content.startswith('-'):
             item_raw = content.lstrip('-').strip()
 
             # Extract annotations/comments in parenthetical notes if present (e.g. "... (ellipses)")
@@ -91,15 +97,23 @@ with open(input_file, 'r', encoding='utf-8') as f:
                 # Prepend the category stack to the token name, 
                 # separated by underscores
                 prefix = "_".join([re.sub(r'[^a-zA-Z0-9_]', '', c.replace(' ', '_')).upper() for c in category_stack])
-                tokens.append(f"{prefix}_{clean_name}")
+                full_name = f"{prefix}_{clean_name}"
             else:
-                tokens.append(clean_name)
+                full_name = clean_name
+
+            tokens.append({'name': full_name, 'values': []})
+
         else:
             cat_name = content.rstrip(':')
             category_stack.append(cat_name)
 
-
-
 with open(output_file, 'w') as f:
     for token in tokens:
-        f.write(f"{token}\n")
+        name = token['name']
+        values = token['values']
+
+        if values:
+            val_str = "\n  - ".join(values)
+            f.write(f"{name}\n  - {val_str}\n")
+        else:
+            f.write(f"{name}\n")

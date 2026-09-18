@@ -1,57 +1,22 @@
 Token Specification:
 
 KW
-  Loops:
+  Loops
     - for
     - do
     - until
     - continue
-  FUNC:
+  FUNC
     - function
     - return
-  CONDITIONAL:
+  CONDITIONAL
     - if
     - else
     - elseif
     - caseof
     - case
     - default
-  DT:
-    Integer
-      Scalar
-        - i64
-        - i32
-        - i16
-      Vector
-        - i64vec
-        - i32vec
-        - i16vec
-      Matrix
-        - i64mat
-        - i32mat
-        - i16mat
-    Float
-      Scalar
-        - f64
-        - f32
-        - f16
-      Vector
-        - f64vec
-        - f32vec
-        - f16vec
-      Matrix
-        - f64mat
-        - f32mat
-        - f16mat
-    Boolean
-      - bool
-      - boolvec
-      - boolmat
-      - true
-      - false
-    Other
-      - string
-  Word-based Logic/Rel Ops:
+  Word-based Logic/Rel Ops
     - and
     - or
     - not
@@ -59,6 +24,33 @@ KW
     - in
   MISC
     - break
+
+DT
+  - Scalar 
+    | i64
+    | i32
+    | i16
+    | f64
+    | f32
+    | f16
+    | bool 
+  - Vector
+    | i64vec
+    | i32vec
+    | i16vec
+    | f64vec
+    | f32vec
+    | f16vec
+    | boolvec
+  - Matrix
+    | i64mat
+    | i32mat
+    | i16mat
+    | f64mat
+    | f32mat
+    | f16mat
+    | boolmat
+  - string
 
 Punctuation
   - {
@@ -75,41 +67,31 @@ Punctuation
   
 Operators
   Standard
-    - +
-    - -
-    - *
-    - /
-    - %
+    - +-
+    - * / %
   Matrix
     - '
-    - .+
-    - .-
     - .*
     - ./
   Relational and Comparison Ops
-    - ==
-    - !=
     - < (less than)
     - > (greater than)
     - <=
     - >=
-  Assignments
-    - =
-    - +=
-    - -=
-    - *=
-    - /=
+  - Assignment
   
-Value Carrying Tokens
-  - id
+- identifier
+  | [a-zA-Z][a-zA-Z0-9_]*
+
+constants
+  - bool constant
+    | 1
+    | 0
   - int literal
+   | [0-9]+
   - float literal
   - string literal
   
 Compiler
   - EOF
   - Error
-        
-    
-      
-      
