@@ -25,21 +25,7 @@ DT_SCALAR
   - f16
   - bool
 DT_VECTOR
-  - i64vec
-  - i32vec
-  - i16vec
-  - f64vec
-  - f32vec
-  - f16vec
-  - boolvec
 DT_MATRIX
-  - i64mat
-  - i32mat
-  - i16mat
-  - f64mat
-  - f32mat
-  - f16mat
-  - boolmat
 DT_STRING
 PUNCTUATION_LBRACE
 PUNCTUATION_RBRACE

@@ -34,22 +34,8 @@ DT
     | f32
     | f16
     | bool 
-  - Vector
-    | i64vec
-    | i32vec
-    | i16vec
-    | f64vec
-    | f32vec
-    | f16vec
-    | boolvec
-  - Matrix
-    | i64mat
-    | i32mat
-    | i16mat
-    | f64mat
-    | f32mat
-    | f16mat
-    | boolmat
+  - vector
+  - matrix
   - string
 
 Punctuation
