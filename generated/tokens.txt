@@ -67,6 +67,7 @@ CONSTANTS_INT_LITERAL
   - [0-9]+
 CONSTANTS_FLOAT_LITERAL
   - [0-9]+\.[0-9]+
+  - [0-9]+(\.[0-9]+)?[eE][+-]?[0-9]+
 CONSTANTS_STRING_LITERAL
   - "[^"\n]*"
 COMPILER_EOF

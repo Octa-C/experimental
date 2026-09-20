@@ -87,6 +87,7 @@ constants
     | [0-9]+
   - float literal
     | [0-9]+\.[0-9]+
+    | [0-9]+(\.[0-9]+)?[eE][+-]?[0-9]+
   - string literal
     | "[^"\n]*"
   
